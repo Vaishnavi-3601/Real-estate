@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: rgb(106, 104, 104);
+}
+
+/* navbar */
+.navbar {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.top-navbar {
+    background-color: #d8232a;
+    color: white;
+}
+
+.bottom-navbar {
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 400px 10px 400px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo .logo-link {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login .login-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+.bottom-navbar .nav-links {
+    display: flex;
+    justify-content: space-around; 
+    list-style: none;
+    width: 100%;
+}
+
+
+.bottom-navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.bottom-navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.bottom-navbar .nav-links a:hover {
+    color: #d8232a;
+}
+
+/*main page*/
+.top{
+    padding: 80px 150px 150px 150px;
+}
+.search-bar {
+    border: 1px solid rgb(176, 173, 173);
+    width: 900px;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 7px 10px 10px;
+    box-sizing: border-box;
+    height: 60px;   
+}
+
+.search-bar input,
+.search-bar select {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
+    border: none;
+    background-color: transparent;
+    border-radius: 30px;
+}
+.top p{
+    font-size: 1.5em;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+}
+.cursive {
+    font-size: 2em;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.vl {
+    border-left: 2px solid rgb(203, 199, 199);
+    height: 35px;
+}
+
+.search-bar button {
+    border: none;
+    height: 48px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: #d8232a;
+    color: white;
+    text-align: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/*section*/
+
+
+
+
+
+/*services*/
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 48px 155px;
+    background-color: rgb(247, 247, 247);
+}
+.service{
+    height: 480px;
+    width: 340px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(205, 205, 211);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+.service-img{
+    width: 100%;
+    display: flex;
+}
+.service-img img{
+    width: 50%;
+    margin: 0 auto 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.service-head ,.service-para{
+    text-align: center;
+    color: black;
+}
+.service-head{
+    height: 70px;
+}
+.service-head h4{
+    margin: 17px auto;
+    color: black;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.service-para{
+    height: 110px;
+}
+.service-para p{
+    padding: 0 45px;
+    color: black;
+    font-size: 15px;
+}
+.service-button{
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-button button{
+    border: 2px solid rgb(0, 65, 217);;
+    height: 48px;
+    width: auto;
+    padding: 9px ;
+    margin: 0px;
+    border-radius: 12px;
+    color: rgb(0, 65, 217);;
+    text-align: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.listings {
+    padding: 2rem 0;
+}
+
+.listings h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.listing {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    width: calc(33% - 2rem);
+    box-sizing: border-box;
+}
+
+.listing img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+</style>
+<body>
+
+    <nav class="navbar top-navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="logo-link">PropertyProspect</a>
+            </div>
+            <div class="login">
+                <a href="#" class="login-link">Login</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar bottom-navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Home Loans</a></li>
+                <li><a href="#">Property Services</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="top">
+        <p>Welcome back! Let’s continue your search<br>Find a home you'll &nbsp;<span class="cursive">love</span></p>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Enter City, Locality, Project">
+        <div class="vl"></div>
+        <label for="count"></label>
+            <select id="count">
+                <option selected disabled>Property Type</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+            <div class="vl"></div>
+        <label for="count"></label>
+            <select id="count">
+                <option selected disabled>Budget</option>
+                <option value="Min">Min</option>
+                <option value="5">5 lakh</option>
+                <option value="10">10 lakh</option>
+                <option value="15">15 lakh</option>
+                <option value="20">20 lakh</option>
+                <option value="25">25 lakh</option>
+                <option value="30">30 lakh</option>
+                <option value="35">35 lakh</option>
+            </select>
+
+        <button>Search</button>
+    </div>
+    </div>
+
+
+    <div class="services">
+        <div class="service">
+            <div class="service-img"><img src="house1.jpg" alt=""></div>
+            <div class="service-head"><h4>Buy a home</h4></div>
+            <div class="service-para"><p>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</p></div>
+            <div class="service-button"><button>Browse homes</button></div>
+        </div>
+        <div class="service">
+            <div class="service-img"><img src="house1.jpg" alt=""></div>
+            <div class="service-head"><h4>Sell a home</h4></div>
+            <div class="service-para"><p>No matter what path you take to sell your home, we can help you navigate a successful sale.</p></div>
+            <div class="service-button"><button>See your options</button></div>
+        </div>
+        <div class="service">
+            <div class="service-img"><img src="house1.jpg" alt=""></div>
+            <div class="service-head"><h4>Rent a home</h4></div>
+            <div class="service-para"><p>We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p></div>
+            <div class="service-button"><button>Find Rentals</button></div>
+        </div>
+    </div>
+
+    <section class="listings">
+        <div class="container">
+            <h2>Featured Listings</h2>
+            <div class="grid">
+                <div class="listing">
+                    <img src="house1.jpg" alt="House 1">
+                    <h3>123 Main St</h3>
+                    <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+                </div>
+                <div class="listing">
+                    <img src="house1.jpg" alt="House 2">
+                    <h3>456 Oak Ave</h3>
+                    <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+                </div>
+                <div class="listing">
+                    <img src="house1.jpg" alt="House 3">
+                    <h3>789 Pine Dr</h3>
+                    <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
