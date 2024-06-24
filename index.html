@@ -32,7 +32,7 @@
     padding: 10px 400px 10px 400px;
 }
 
-.container {
+.navbar .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -131,9 +131,77 @@
     cursor: pointer;
 }
 
-/*section*/
+/*manage*/
 
+.manage{
+    width: 100%;
+    padding: 50px;
+}
+.manage h4 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
 
+.manage p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    margin: 20px;
+}
+
+.submanage {
+display: flex;
+width: 1400px; 
+            margin: 0 auto;
+            height: 250px; 
+        }
+        .man-img {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 10%;
+        }
+        .man-info {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            width: 10%;
+            text-align: left;
+            background-color: #eceaea;
+        }
+        .man-img img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .man-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.man-info p {
+    font-size: 1em;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.man-info a {
+    color: #255b95;
+    text-decoration: none;
+}
+        .submanage:nth-child(even) {
+            flex-direction: row-reverse;
+        }
 
 
 
@@ -208,6 +276,7 @@
     background-color: white;
 }
 
+/*listing*/
 
 .listings {
     padding: 2rem 0;
@@ -216,6 +285,7 @@
 .listings h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 2em;
 }
 
 .grid {
@@ -230,7 +300,7 @@
     border-radius: 5px;
     padding: 1rem;
     text-align: center;
-    width: calc(33% - 2rem);
+    width: calc(20% - 2rem);
     box-sizing: border-box;
 }
 
@@ -267,7 +337,6 @@
 
 
 
-
     <div class="top">
         <p>Welcome back! Let’s continue your search<br>Find a home you'll &nbsp;<span class="cursive">love</span></p>
 
@@ -298,7 +367,28 @@
     </div>
     </div>
 
-
+    <div class="manage">
+        <h4>The Perfect Place to Manage Your Property</h4>
+        <p>Work with the best suite of property management tools on the market.</p>
+        <div class="submanages">
+            <div class="submanage">
+                <div class="man-info">
+                    <h2>Advertise Your Rental</h2>
+                    <p>Connect with more than 75 million renters looking for new homes using our comprehensive marketing platform.</p>
+                    <a href="#">List Your Property</a>
+                </div>
+                <div class="man-img"><img src="house1.jpg" alt=""></div>
+            </div>
+            <div class="submanage">
+                <div class="man-info">
+                    <h2>Lease 100% Online</h2>
+                    <p>Accept applications, process rent payments online, and sign digital leases all powered on a single platform.</p>
+                    <a href="#">Manage Your Property</a>
+                </div>
+                <div class="man-img"><img src="house1.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
     <div class="services">
         <div class="service">
             <div class="service-img"><img src="house1.jpg" alt=""></div>
@@ -333,6 +423,16 @@
                     <img src="house1.jpg" alt="House 2">
                     <h3>456 Oak Ave</h3>
                     <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+                </div>
+                <div class="listing">
+                    <img src="house1.jpg" alt="House 3">
+                    <h3>789 Pine Dr</h3>
+                    <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+                </div>
+                <div class="listing">
+                    <img src="house1.jpg" alt="House 3">
+                    <h3>789 Pine Dr</h3>
+                    <p>₹ 600,000 - 3 Beds, 2 Baths</p>
                 </div>
                 <div class="listing">
                     <img src="house1.jpg" alt="House 3">
