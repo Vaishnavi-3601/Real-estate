@@ -3,313 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: rgb(106, 104, 104);
-}
+    <title>PropertyProspect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: Arial, sans-serif;
+         font-size: 14px;
+         color: rgb(106, 104, 104);
+         font-weight: lighter;
+     }
+     
+     /* navbar */
+     .navbar {
+         width: 100%;
+         padding: 10px 0;
+     }
+     
+     .top-navbar {
+         background-color: #d8232a;
+         color: white;
+         height: 55px;
+     }
+     
+     .bottom-navbar {
+         background-color: white;
+         border-bottom: 1px solid lightgrey;
+         padding: 10px 300px 10px 300px;
+     }
+     
+     .navbar .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 0 20px;
+     }
+     
+     .logo .logo-link {
+         color: white;
+         font-size: 2em;
+         text-decoration: none;
+         font-weight: bold;
+     }
+     
+     .login .login-link {
+         color: white;
+         text-decoration: none;
+         font-size: 1.5em;
+     }
+     
+     
+     .bottom-navbar .nav-links {
+         display: flex;
+         justify-content: space-around; 
+         list-style: none;
+         width: 100%;
+     }
+     
+     
+     .bottom-navbar .nav-links li {
+         margin-left: 20px;
+     }
+     
+     .bottom-navbar .nav-links a {
+         color: #333;
+         text-decoration: none;
+         font-size: 1.2em;
+     }
+     .bottom-navbar .nav-links i {
+         color: #d8232a;
+         text-decoration: none;
+         font-size: 1em;
+     }
+     
+     .bottom-navbar .nav-links a:hover {
+         color: #d8232a;
+     }
+     
+     /*main page*/
+     .top{
+         padding: 80px 150px 100px 150px;
+     }
+     .search-bar {
+         border: 1px solid rgb(176, 173, 173);
+         width: 900px;
+         margin: auto;
+         border-radius: 30px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 10px 7px 10px 10px;
+         box-sizing: border-box;
+         height: 60px;   
+     }
+     
+     .search-bar input,
+     .search-bar select {
+         flex: 1;
+         padding: 10px;
+         margin: 0 10px;
+         border: none;
+         background-color: transparent;
+         border-radius: 30px;
+     }
+     .top p{
+         font-size: 1.5em;
+         margin: auto;
+         text-align: center;
+         padding: 25px;
+     }
+     .cursive {
+         font-size: 2em;
+         font-family: 'Brush Script MT', cursive;
+     }
+     
+     .vl {
+         border-left: 2px solid rgb(203, 199, 199);
+         height: 35px;
+     }
+     
+     .search-bar button {
+         border: none;
+         height: 48px;
+         width: 150px;
+         border-radius: 30px;
+         background-color: #d8232a;
+         color: white;
+         text-align: center;
+         flex-shrink: 0;
+         cursor: pointer;
+         font-size: 1.5em;
+     }
+     .search-bar button i{
+        color: #fff;
+        font-size: 1em;
+     }
+     
+     /*manage*/
+     
+     .manage{
+         width: 100%;
+         padding: 50px;
+     }
+     .manage h4 {
+         font-size: 2em;
+         margin-bottom: 10px;
+         color: #333;
+         text-align: center;
+     }
+     
+     .manage p {
+         font-size: 1.2em;
+         color: #666;
+         line-height: 1.5;
+         text-align: center;
+         margin: 20px;
+     }
+     
+     .submanage {
+     display: flex;
+     width: 1400px; 
+     margin: 0 auto;
+     height: 300px; 
+     }
+             .man-img {
+                 flex: 1; 
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 justify-content: center;
+                 width: 10%;
+             }
+             .man-info {
+                 flex: 1; 
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 width: 10%;
+                 text-align: left;
+                 background-color: #eceaea;
+             }
+             .man-img img {
+                 width: 100%;
+                 max-width: 100%;
+                 max-height: 100%;
+             }
+             .man-info h2 {
+         font-size: 1.5em;
+         margin-bottom: 10px;
+         color: #000000;
+         padding: 0 90px;
+     }
+     
+     .man-info p {
+         font-size: 1em;
+         color: #000000;
+         margin-bottom: 20px;
+         text-align: left;
+         margin-left: 0;
+         padding: 0 90px;
+     }
+     
+     .man-info a {
+         color: #255b95;
+         text-decoration: none;
+         padding: 0 90px;
+     }
+             .submanage:nth-child(even) {
+                 flex-direction: row-reverse;
+             }
+     
+     
+     
+     /*services*/
+     .services{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         gap: 20px;
+         padding: 48px 155px;
+         background-color: rgb(247, 247, 247);
+     }
+     .service{
+         height: 480px;
+         width: 340px;
+         background-color: rgb(255, 255, 255);
+         border: 1px solid rgb(205, 205, 211);
+         box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 15px;
+         border-radius: 12px;
+         display: flex;
+         flex-direction: column;
+         padding: 16px;
+     }
+     .service-img{
+         width: 300px;
+         height: 150px;
+         display: flex;
+     }
+     .service-img img{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+         margin: 0 auto 0 auto;
+         align-items: center;
+         justify-content: center;
+     }
+     .service-head ,.service-para{
+         text-align: center;
+         color: black;
+     }
+     .service-head{
+         height: 70px;
+     }
+     .service-head h4{
+         margin: 17px auto;
+         color: black;
+         font-size: xx-large;
+         font-weight: bolder;
+     }
+     .service-para{
+         height: 110px;
+     }
+     .service-para p{
+         padding: 0 45px;
+         color: black;
+         font-size: 15px;
+     }
+     .service-button{
+         width: 100%;
+         margin: 10px auto;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     .service-button button{
+         border: 2px solid rgb(0, 65, 217);;
+         height: 48px;
+         width: auto;
+         padding: 9px ;
+         margin: 0px;
+         border-radius: 12px;
+         color: rgb(0, 65, 217);;
+         text-align: center;
+         flex-shrink: 0;
+         cursor: pointer;
+         background-color: white;
+     }
+     
+     /*listing*/
+     
+     .listings {
+         padding: 2rem 0;
+     }
+     
+     .listings h2 {
+         text-align: center;
+         margin-bottom: 1rem;
+         font-size: 2em;
+     }
+     
+     .grid {
+         display: flex;
+         gap: 1rem;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+     
+     .listing {
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         padding: 1rem;
+         text-align: center;
+         width: calc(20% - 2rem);
+         box-sizing: border-box;
+     }
+     
+     .listing img {
+         width: 100%;
+         height: auto;
+         border-radius: 5px;
+     }
 
-/* navbar */
-.navbar {
-    width: 100%;
-    padding: 10px 0;
-}
 
-.top-navbar {
-    background-color: #d8232a;
-    color: white;
-}
+     /*footer*/
+     .footer {
+            background-color : rgb(245, 245, 245);
+            color: #000;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
 
-.bottom-navbar {
-    background-color: white;
-    border-bottom: 1px solid lightgrey;
-    padding: 10px 400px 10px 400px;
-}
-
-.navbar .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo .logo-link {
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login .login-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-
-.bottom-navbar .nav-links {
-    display: flex;
-    justify-content: space-around; 
-    list-style: none;
-    width: 100%;
-}
-
-
-.bottom-navbar .nav-links li {
-    margin-left: 20px;
-}
-
-.bottom-navbar .nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.bottom-navbar .nav-links a:hover {
-    color: #d8232a;
-}
-
-/*main page*/
-.top{
-    padding: 80px 150px 150px 150px;
-}
-.search-bar {
-    border: 1px solid rgb(176, 173, 173);
-    width: 900px;
-    margin: auto;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 7px 10px 10px;
-    box-sizing: border-box;
-    height: 60px;   
-}
-
-.search-bar input,
-.search-bar select {
-    flex: 1;
-    padding: 10px;
-    margin: 0 10px;
-    border: none;
-    background-color: transparent;
-    border-radius: 30px;
-}
-.top p{
-    font-size: 1.5em;
-    margin: auto;
-    text-align: center;
-    padding: 25px;
-}
-.cursive {
-    font-size: 2em;
-    font-family: 'Brush Script MT', cursive;
-}
-
-.vl {
-    border-left: 2px solid rgb(203, 199, 199);
-    height: 35px;
-}
-
-.search-bar button {
-    border: none;
-    height: 48px;
-    width: 150px;
-    border-radius: 30px;
-    background-color: #d8232a;
-    color: white;
-    text-align: center;
-    flex-shrink: 0;
-    cursor: pointer;
-}
-
-/*manage*/
-
-.manage{
-    width: 100%;
-    padding: 50px;
-}
-.manage h4 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
-    text-align: center;
-}
-
-.manage p {
-    font-size: 1.2em;
-    color: #666;
-    line-height: 1.5;
-    text-align: center;
-    margin: 20px;
-}
-
-.submanage {
-display: flex;
-width: 1400px; 
+        .footer .container {
+            max-width: 1200px;
             margin: 0 auto;
-            height: 250px; 
-        }
-        .man-img {
-            flex: 1; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            width: 10%;
-        }
-        .man-info {
-            flex: 1; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px;
-            width: 10%;
-            text-align: left;
-            background-color: #eceaea;
-        }
-        .man-img img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        .man-info h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #000000;
-}
-
-.man-info p {
-    font-size: 1em;
-    color: #000000;
-    margin-bottom: 20px;
-    text-align: left;
-    margin-left: 0;
-}
-
-.man-info a {
-    color: #255b95;
-    text-decoration: none;
-}
-        .submanage:nth-child(even) {
-            flex-direction: row-reverse;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
+        .footer .col {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .footer h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #d8232a;
+        }
+
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            color: #d8232a;
+        }
+
+        .footer .bottom-bar {
+            background-color: #222;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .footer .bottom-bar p {
+            margin: 0;
+            font-size: 14px;
+            color: #aaa;
+        }
 
 
-/*services*/
-.services{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 48px 155px;
-    background-color: rgb(247, 247, 247);
-}
-.service{
-    height: 480px;
-    width: 340px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(205, 205, 211);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 15px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-}
-.service-img{
-    width: 100%;
-    display: flex;
-}
-.service-img img{
-    width: 50%;
-    margin: 0 auto 0 auto;
-    align-items: center;
-    justify-content: center;
-}
-.service-head ,.service-para{
-    text-align: center;
-    color: black;
-}
-.service-head{
-    height: 70px;
-}
-.service-head h4{
-    margin: 17px auto;
-    color: black;
-    font-size: xx-large;
-    font-weight: bolder;
-}
-.service-para{
-    height: 110px;
-}
-.service-para p{
-    padding: 0 45px;
-    color: black;
-    font-size: 15px;
-}
-.service-button{
-    width: 100%;
-    margin: 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.service-button button{
-    border: 2px solid rgb(0, 65, 217);;
-    height: 48px;
-    width: auto;
-    padding: 9px ;
-    margin: 0px;
-    border-radius: 12px;
-    color: rgb(0, 65, 217);;
-    text-align: center;
-    flex-shrink: 0;
-    cursor: pointer;
-    background-color: white;
-}
+        .footer .social a {
+            color: #000;
+            text-decoration: none;
+        }
 
-/*listing*/
-
-.listings {
-    padding: 2rem 0;
-}
-
-.listings h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2em;
-}
-
-.grid {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.listing {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1rem;
-    text-align: center;
-    width: calc(20% - 2rem);
-    box-sizing: border-box;
-}
-
-.listing img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-</style>
+     </style>
+</head>
 <body>
 
     <nav class="navbar top-navbar">
@@ -325,12 +410,12 @@ width: 1400px;
     <nav class="navbar bottom-navbar">
         <div class="container">
             <ul class="nav-links">
-                <li><a href="#">Buy</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Sell</a></li>
-                <li><a href="#">Home Loans</a></li>
-                <li><a href="#">Property Services</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#">Buy&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Rent&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Sell&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Home Loans&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Property Services&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Help&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -341,7 +426,7 @@ width: 1400px;
         <p>Welcome back! Let’s continue your search<br>Find a home you'll &nbsp;<span class="cursive">love</span></p>
 
     <div class="search-bar">
-        <input type="text" placeholder="Enter City, Locality, Project">
+        <input type="text" placeholder=" Enter City, Locality, Project">
         <div class="vl"></div>
         <label for="count"></label>
             <select id="count">
@@ -363,11 +448,11 @@ width: 1400px;
                 <option value="35">35 lakh</option>
             </select>
 
-        <button>Search</button>
+        <button><i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search</button>
     </div>
     </div>
-
-    <div class="manage">
+<hr>
+    <div class="manage" >
         <h4>The Perfect Place to Manage Your Property</h4>
         <p>Work with the best suite of property management tools on the market.</p>
         <div class="submanages">
@@ -377,7 +462,7 @@ width: 1400px;
                     <p>Connect with more than 75 million renters looking for new homes using our comprehensive marketing platform.</p>
                     <a href="#">List Your Property</a>
                 </div>
-                <div class="man-img"><img src="house1.jpg" alt=""></div>
+                <div class="man-img"><img src="./img/img1.jpg" alt=""></div>
             </div>
             <div class="submanage">
                 <div class="man-info">
@@ -385,25 +470,59 @@ width: 1400px;
                     <p>Accept applications, process rent payments online, and sign digital leases all powered on a single platform.</p>
                     <a href="#">Manage Your Property</a>
                 </div>
-                <div class="man-img"><img src="house1.jpg" alt=""></div>
+                <div class="man-img"><img src="./img/img2.jpg" alt=""></div>
             </div>
         </div>
     </div>
+
+
+    <div class="manage">
+        <h4>Renting Made Easy for Residents and Property Managers</h4>
+        <p>Our articles, guides, and videos help you through the process, start to finish.</p>
+        <div class="submanages">
+            <div class="submanage">
+                <div class="man-info">
+                    <h2>Tips for Renters</h2>
+                    <p>Find answers to all of your renting questions with the best renter’s guide in the galaxy.</p>
+                    <a href="#">Browse Articles</a>
+                </div>
+                <div class="man-img"><img src="./img/img3.jpg" alt=""></div>
+            </div>
+            <div class="submanage">
+                <div class="man-info">
+                    <h2>Property Manager Resources</h2>
+                    <p>Stay up-to-date using our tips and guides on rent payments, leasing, management solutions, and more.</p>
+                    <a href="#">Stay Informed</a>
+                </div>
+                <div class="man-img"><img src="./img/img4.jpg" alt=""></div>
+            </div>
+            <div class="submanage">
+                <div class="man-info">
+                    <h2>Lease 100% Online</h2>
+                    <p>Accept applications, process rent payments online, and sign digital leases all powered on a single platform.</p>
+                    <a href="#">Manage Your Property</a>
+                </div>
+                <div class="man-img"><img src="./img/img5.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="services">
         <div class="service">
-            <div class="service-img"><img src="house1.jpg" alt=""></div>
+            <div class="service-img"><img src="./img/serv1.jpg" alt=""></div>
             <div class="service-head"><h4>Buy a home</h4></div>
             <div class="service-para"><p>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</p></div>
             <div class="service-button"><button>Browse homes</button></div>
         </div>
         <div class="service">
-            <div class="service-img"><img src="house1.jpg" alt=""></div>
+            <div class="service-img"><img src="./img/serv2.jpg" alt=""></div>
             <div class="service-head"><h4>Sell a home</h4></div>
             <div class="service-para"><p>No matter what path you take to sell your home, we can help you navigate a successful sale.</p></div>
             <div class="service-button"><button>See your options</button></div>
         </div>
         <div class="service">
-            <div class="service-img"><img src="house1.jpg" alt=""></div>
+            <div class="service-img"><img src="./img/serv3.jpg" alt=""></div>
             <div class="service-head"><h4>Rent a home</h4></div>
             <div class="service-para"><p>We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p></div>
             <div class="service-button"><button>Find Rentals</button></div>
@@ -415,33 +534,138 @@ width: 1400px;
             <h2>Featured Listings</h2>
             <div class="grid">
                 <div class="listing">
-                    <img src="house1.jpg" alt="House 1">
+                    <img src="./img/fl1.jpg" alt="House 1">
                     <h3>123 Main St</h3>
                     <p>₹ 500,000 - 3 Beds, 2 Baths</p>
                 </div>
                 <div class="listing">
-                    <img src="house1.jpg" alt="House 2">
+                    <img src="./img/fl2.jpg" alt="House 2">
                     <h3>456 Oak Ave</h3>
                     <p>₹ 750,000 - 4 Beds, 3 Baths</p>
                 </div>
                 <div class="listing">
-                    <img src="house1.jpg" alt="House 3">
+                    <img src="./img/fl3.jpg" alt="House 3">
                     <h3>789 Pine Dr</h3>
                     <p>₹ 600,000 - 3 Beds, 2 Baths</p>
                 </div>
                 <div class="listing">
-                    <img src="house1.jpg" alt="House 3">
+                    <img src="./img/fl4.jpg" alt="House 3">
                     <h3>789 Pine Dr</h3>
                     <p>₹ 600,000 - 3 Beds, 2 Baths</p>
                 </div>
                 <div class="listing">
-                    <img src="house1.jpg" alt="House 3">
+                    <img src="./img/fl5.jpg" alt="House 3">
                     <h3>789 Pine Dr</h3>
                     <p>₹ 600,000 - 3 Beds, 2 Baths</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <button id="buy">Buying</button>
+    <button id="rent">Renting</button>
+    <button id="sel">Selling</button>
+
+    <div id="buy" class="grid">
+        <div class="listing">
+            <img src="./img/fl1.jpg" alt="House 1">
+            <h3>123 Main St</h3>
+            <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+        </div>
+        <div class="listing">
+            <img src="./img/fl2.jpg" alt="House 2">
+            <h3>456 Oak Ave</h3>
+            <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+        </div>
+        <div class="listing">
+            <img src="./img/fl3.jpg" alt="House 3">
+            <h3>789 Pine Dr</h3>
+            <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+        </div>
+    </div>
+
+    <div id="rent" class="grid" style="display: none;">
+        <div class="listing">
+            <img src="./img/fl1.jpg" alt="House 1">
+            <h3>123 Main St</h3>
+            <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+        </div>
+        <div class="listing">
+            <img src="./img/fl2.jpg" alt="House 2">
+            <h3>456 Oak Ave</h3>
+            <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+        </div>
+        <div class="listing">
+            <img src="./img/fl3.jpg" alt="House 3">
+            <h3>789 Pine Dr</h3>
+            <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+        </div>
+    </div>
+
+    <div id="sell" class="grid" style="display: none;">
+        <div class="listing">
+            <img src="./img/fl1.jpg" alt="House 1">
+            <h3>123 Main St</h3>
+            <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+        </div>
+        <div class="listing">
+            <img src="./img/fl2.jpg" alt="House 2">
+            <h3>456 Oak Ave</h3>
+            <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+        </div>
+        <div class="listing">
+            <img src="./img/fl3.jpg" alt="House 3">
+            <h3>789 Pine Dr</h3>
+            <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+        </div>
+    </div>
     
+
+    <footer class="footer">
+        <div class="container">
+            <div class="col" style="margin: auto;">
+                <div class="logo">
+                    <a href="#" class="logo-link" style="color: #d8232a;"> PropertyProspect</a>
+                </div>
+                
+            </div>
+            <div class="col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Company Info</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Buy Property</a></li>
+                    <li><a href="#">Rent Property</a></li>
+                    <li><a href="#">Sell Property</a></li>
+                    <li><a href="#">Home Loans</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h4>Follow Us</h4>
+                <a href="#"><i class="fa-brands fa-facebook"></i>&nbsp;Facebook</a>
+                <a href="#"><i class="fa-brands fa-twitter"></i>&nbsp;Twitter</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 Real Estate Website. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
