@@ -86,7 +86,7 @@
      
      /*main page*/
      .top{
-         padding: 80px 150px 100px 150px;
+         padding: 10px 150px 100px 150px;
      }
      .search-bar {
          border: 1px solid rgb(176, 173, 173);
@@ -166,11 +166,11 @@
      
      .submanage {
      display: flex;
-     width: 1400px; 
+     width: 1200px; 
      margin: 0 auto;
      height: 300px; 
      }
-             .man-img {
+    .man-img {
                  flex: 1; 
                  display: flex;
                  flex-direction: column;
@@ -189,12 +189,14 @@
              }
              .man-img img {
                  width: 100%;
+                 height: 100%;
                  max-width: 100%;
                  max-height: 100%;
              }
              .man-info h2 {
-         font-size: 1.5em;
+         font-size: 2em;
          margin-bottom: 10px;
+         font-weight: bold;
          color: #000000;
          padding: 0 90px;
      }
@@ -212,6 +214,7 @@
          color: #255b95;
          text-decoration: none;
          padding: 0 90px;
+         font-weight: bold;
      }
              .submanage:nth-child(even) {
                  flex-direction: row-reverse;
@@ -226,6 +229,10 @@
          gap: 20px;
          padding: 48px 155px;
          background-color: rgb(247, 247, 247);
+     }
+     .service:hover{
+        transform: scale(1.05,1.05);
+        transition: transform 350ms ease-in-out;
      }
      .service{
          height: 480px;
@@ -280,17 +287,21 @@
          justify-content: center;
      }
      .service-button button{
-         border: 2px solid rgb(0, 65, 217);;
+         border: 2px solid rgb(0, 65, 217);
          height: 48px;
          width: auto;
          padding: 9px ;
          margin: 0px;
          border-radius: 12px;
-         color: rgb(0, 65, 217);;
+         color: rgb(0, 65, 217);
          text-align: center;
          flex-shrink: 0;
          cursor: pointer;
          background-color: white;
+     }
+
+     .service-button button:hover{
+         background-color: rgb(230, 237, 255);
      }
      
      /*listing*/
@@ -301,8 +312,9 @@
      
      .listings h2 {
          text-align: center;
-         margin-bottom: 1rem;
+         margin-bottom: 2rem;
          font-size: 2em;
+         font-weight: bold;
      }
      
      .grid {
@@ -310,6 +322,11 @@
          gap: 1rem;
          flex-wrap: wrap;
          justify-content: center;
+     }
+     .listing:hover{
+        transform: scale(1.05,1.05);
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 15px;
+        transition:  350ms ;
      }
      
      .listing {
@@ -327,6 +344,50 @@
          border-radius: 5px;
      }
 
+
+     /*main-sec*/
+
+        .button-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #f6f6f6;
+        }
+        .button-container button:hover {
+            transform: scale(1.1,1.1);
+        }
+        .button-container .active {
+            background-color: #d8232a;
+            color: white;
+        }
+
+        .grid-container {
+            display: none;
+            justify-content: space-between;
+            padding: 20px;
+            text-align: center;
+        }
+        .grid-container .grid .listing {
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         padding: 1rem;
+         text-align: center;
+         width: calc(30% - 2rem);
+         box-sizing: border-box;
+     }
+
+     .grid-container .listing img {
+         width: 100%;
+         height: 350px;
+         border-radius: 5px;
+     }
 
      /*footer*/
      .footer {
@@ -393,6 +454,9 @@
             text-decoration: none;
         }
 
+        .footer .social a:hover {
+            color: #d8232a;
+        }
      </style>
 </head>
 <body>
@@ -420,10 +484,14 @@
         </div>
     </nav>
 
-
+    <video autoplay muted loop id="bg-video" width="1470" height="600" style="object-fit: cover;">
+        <source src="./img/realestate.mp4" type="video/mp4" />
+    </video>
 
     <div class="top">
-        <p>Welcome back! Let’s continue your search<br>Find a home you'll &nbsp;<span class="cursive">love</span></p>
+        <p>Welcome back! Let’s continue your search</p>
+        
+        <p>Find a home you'll &nbsp;<span class="cursive">love</span></p>
 
     <div class="search-bar">
         <input type="text" placeholder=" Enter City, Locality, Project">
@@ -452,6 +520,78 @@
     </div>
     </div>
 <hr>
+
+
+<div class="main-sec">
+    <div class="button-container">
+        <button id="btn-buy" class="active">Buying</button>
+        <button id="btn-rent">Renting</button>
+        <button id="btn-sell">Selling</button>
+    </div>
+
+    <div id="buy-section" class="grid-container" style="display: flex;">
+        <div class="grid">
+            <div class="listing">
+                <img src="./img/red1.jpg" alt="House 1">
+                <h3>123 Main St</h3>
+                <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+            </div>
+            <div class="listing">
+                <img src="./img/red2.jpg" alt="House 2">
+                <h3>456 Oak Ave</h3>
+                <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+            </div>
+            <div class="listing">
+                <img src="./img/red3.jpg" alt="House 3">
+                <h3>789 Pine Dr</h3>
+                <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="rent-section" class="grid-container">
+        <div class="grid">
+            <div class="listing">
+                <img src="./img/black1.jpg" alt="House 1">
+                <h3>125 Main St</h3>
+                <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+            </div>
+            <div class="listing">
+                <img src="./img/black2.jpg" alt="House 2">
+                <h3>456 Oak Ave</h3>
+                <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+            </div>
+            <div class="listing">
+                <img src="./img/black3.jpg" alt="House 3">
+                <h3>789 Pine Dr</h3>
+                <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="sell-section" class="grid-container">
+        <div class="grid">
+            <div class="listing">
+                <img src="./img/yellow1.jpg" alt="House 1">
+                <h3>127 Main St</h3>
+                <p>₹ 500,000 - 3 Beds, 2 Baths</p>
+            </div>
+            <div class="listing">
+                <img src="./img/yellow2.jpg" alt="House 2">
+                <h3>456 Oak Ave</h3>
+                <p>₹ 750,000 - 4 Beds, 3 Baths</p>
+            </div>
+            <div class="listing">
+                <img src="./img/yellow3.jpg" alt="House 3">
+                <h3>789 Pine Dr</h3>
+                <p>₹ 600,000 - 3 Beds, 2 Baths</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
     <div class="manage" >
         <h4>The Perfect Place to Manage Your Property</h4>
         <p>Work with the best suite of property management tools on the market.</p>
@@ -562,63 +702,7 @@
         </div>
     </section>
 
-    <button id="buy">Buying</button>
-    <button id="rent">Renting</button>
-    <button id="sel">Selling</button>
 
-    <div id="buy" class="grid">
-        <div class="listing">
-            <img src="./img/fl1.jpg" alt="House 1">
-            <h3>123 Main St</h3>
-            <p>₹ 500,000 - 3 Beds, 2 Baths</p>
-        </div>
-        <div class="listing">
-            <img src="./img/fl2.jpg" alt="House 2">
-            <h3>456 Oak Ave</h3>
-            <p>₹ 750,000 - 4 Beds, 3 Baths</p>
-        </div>
-        <div class="listing">
-            <img src="./img/fl3.jpg" alt="House 3">
-            <h3>789 Pine Dr</h3>
-            <p>₹ 600,000 - 3 Beds, 2 Baths</p>
-        </div>
-    </div>
-
-    <div id="rent" class="grid" style="display: none;">
-        <div class="listing">
-            <img src="./img/fl1.jpg" alt="House 1">
-            <h3>123 Main St</h3>
-            <p>₹ 500,000 - 3 Beds, 2 Baths</p>
-        </div>
-        <div class="listing">
-            <img src="./img/fl2.jpg" alt="House 2">
-            <h3>456 Oak Ave</h3>
-            <p>₹ 750,000 - 4 Beds, 3 Baths</p>
-        </div>
-        <div class="listing">
-            <img src="./img/fl3.jpg" alt="House 3">
-            <h3>789 Pine Dr</h3>
-            <p>₹ 600,000 - 3 Beds, 2 Baths</p>
-        </div>
-    </div>
-
-    <div id="sell" class="grid" style="display: none;">
-        <div class="listing">
-            <img src="./img/fl1.jpg" alt="House 1">
-            <h3>123 Main St</h3>
-            <p>₹ 500,000 - 3 Beds, 2 Baths</p>
-        </div>
-        <div class="listing">
-            <img src="./img/fl2.jpg" alt="House 2">
-            <h3>456 Oak Ave</h3>
-            <p>₹ 750,000 - 4 Beds, 3 Baths</p>
-        </div>
-        <div class="listing">
-            <img src="./img/fl3.jpg" alt="House 3">
-            <h3>789 Pine Dr</h3>
-            <p>₹ 600,000 - 3 Beds, 2 Baths</p>
-        </div>
-    </div>
     
 
     <footer class="footer">
@@ -667,5 +751,50 @@
             <p>&copy; 2024 Real Estate Website. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const btnBuy = document.getElementById('btn-buy');
+        const btnRent = document.getElementById('btn-rent');
+        const btnSell = document.getElementById('btn-sell');
+
+        const buySection = document.getElementById('buy-section');
+        const rentSection = document.getElementById('rent-section');
+        const sellSection = document.getElementById('sell-section');
+
+        function showSection(section) {
+            buySection.style.display = 'none';
+            rentSection.style.display = 'none';
+            sellSection.style.display = 'none';
+
+            section.style.display = 'flex';
+        }
+
+        function activateButton(button) {
+            btnBuy.classList.remove('active');
+            btnRent.classList.remove('active');
+            btnSell.classList.remove('active');
+
+            button.classList.add('active');
+        }
+
+        btnBuy.addEventListener('click', () => {
+            showSection(buySection);
+            activateButton(btnBuy);
+        });
+
+        btnRent.addEventListener('click', () => {
+            showSection(rentSection);
+            activateButton(btnRent);
+        });
+
+        btnSell.addEventListener('click', () => {
+            showSection(sellSection);
+            activateButton(btnSell);
+        });
+
+        // Show buy section by default
+        showSection(buySection);
+        activateButton(btnBuy);
+    </script>
 </body>
 </html>
